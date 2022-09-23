@@ -1,0 +1,9 @@
+[Unit]
+Description=Service that runs on first boot to set things up
+After=network-online.target
+[Service]
+Type=exec
+ExecStart=bash /app/first-boot.sh
+User=root
+[Install]
+WantedBy=multi-user.target

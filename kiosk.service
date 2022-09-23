@@ -1,0 +1,12 @@
+[Unit]
+Description=Chromium kiosk thing
+After=network-online.target
+[Service]
+Type=exec
+ExecStart=/app/go.sh
+ExecStop=killall Xorg php
+Restart=on-failure
+User=opc
+WorkingDirectory=/app
+[Install]
+WantedBy=multi-user.target
