@@ -57,6 +57,9 @@ echo "PasswordAuthentication no" >> /tmp/cabinet-imager$TARGET/rootfs/etc/ssh/ss
 echo "Writing wpa_supplicant"
 touch wpa_supplicant.conf
 cp wpa_supplicant.conf /tmp/cabinet-imager$TARGET/rootfs/etc/wpa_supplicant/wpa_supplicant.conf
+echo "Writing hostname"
+touch hostname
+cp hostname /tmp/cabinet-imager$TARGET/rootfs/app/hostname
 echo "Writing kiosk service"
 cp kiosk.service /tmp/cabinet-imager$TARGET/rootfs/etc/systemd/system/kiosk.service
 echo "Sync to disk"
